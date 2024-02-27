@@ -9,8 +9,7 @@ require('./auth');
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 const static_path = path.join(__dirname, '/public');
-const port = process.env.PORT || 3000;
-
+const port = 3000 || process.env.PORT;
 
 // Set EJS as the view engine
 app.set('view engine', 'ejs');
